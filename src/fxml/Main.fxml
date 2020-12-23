@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="440.0" minWidth="900.0" prefHeight="440.0" prefWidth="900.0" stylesheets="@../css/pageCss.css" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <VBox minHeight="440.0" minWidth="900.0" prefHeight="440.0" prefWidth="900.0" spacing="5.0" style="-fx-background-color: #426FAF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane side="BOTTOM" style="-fx-background-color: #426FAF;" tabClosingPolicy="UNAVAILABLE" tabMinWidth="150.0">
+              <tabs>
+                <Tab style="-fx-background-color: #FFFFFF; -fx-margin: 100px 100px 100px 100px;" text="Client">
+                     <content>
+                        <fx:include source="page/PageClient.fxml" />
+                     </content>
+                </Tab>
+                <Tab closable="false" style="-fx-background-color: #FFFFFF;" text="Produit">
+                     <content>
+                        <fx:include source="page/PageProduit.fxml" />
+                     </content>
+                </Tab>
+                  <Tab style="-fx-background-color: #FFFFFF;" text="Categorie">
+                     <content>
+                        <fx:include source="page/PageCategorie.fxml" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #FFFFFF;" text="Commande">
+                     <content>
+                        <fx:include source="page/PageCommande.fxml" />
+                     </content>
+                  </Tab>
+              </tabs>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TabPane>
+            <ChoiceBox fx:id="cbxPersistance" prefWidth="150.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
